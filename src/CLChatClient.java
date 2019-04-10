@@ -99,7 +99,7 @@ class CLChatClient {
 
         try {
             System.out.println("Connecting to " + computer + " on port " + port);
-            connection = new Socket(computer,port);
+            connection = new Socket(computer, port);
             incoming = new BufferedReader(
                     new InputStreamReader(connection.getInputStream()) );
             outgoing = new PrintWriter(connection.getOutputStream());
