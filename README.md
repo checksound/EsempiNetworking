@@ -2,7 +2,7 @@
 
 ## NetworkInterface & InetAddress
 
-Programma per visualuzzare le informazioni su le interfacce di rete sul proprio PC: [ShowMyNetwork](./src/ShowMyNetwork.java).
+Programma per visualuzzare le informazioni su le interfacce di rete sul proprio PC, utilizzando le classi `java.net.NetworkInterface` e `java.net.InetAddress`: [ShowMyNetwork](./src/ShowMyNetwork.java).
 
 
 ## FETCH URL
