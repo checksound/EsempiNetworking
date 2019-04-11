@@ -1,5 +1,10 @@
 # Esempi Networking
 
+## NetworkInterface & InetAddress
+
+Programma per visualuzzare le informazioni su le interfacce di rete sul proprio PC: [ShowMyNetwork](./src/ShowMyNetwork.java).
+
+
 ## FETCH URL
 
 Esempio [FetchURL](./src/FetchURL.java) per connetteri a una risorsa (Es: http://www.wikipedia.it) e leggere il contenuto della pagina HTML.
