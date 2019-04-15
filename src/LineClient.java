@@ -13,8 +13,9 @@ public class LineClient {
 		this.port = port;
 	}
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		LineClient client = new LineClient("127.0.0.1", 1337);
+		client.startClient();
 	}
 
 	public void startClient() throws IOException {
