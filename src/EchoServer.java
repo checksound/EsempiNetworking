@@ -17,6 +17,8 @@ public class EchoServer {
 		serverSocket = new ServerSocket(port);
 		System.out.println("Server	socket	ready on port:" + port);
 		// resto in attesa di una connessione
+		
+		while (true) {
 		Socket socket = serverSocket.accept();
 		System.out.println("Received client	connection");
 		// apro gli stream di input e output per leggere
@@ -39,7 +41,9 @@ public class EchoServer {
 		in.close();
 		out.close();
 		socket.close();
-		serverSocket.close();
+		} 
+		
+		// serverSocket.close();
 	}
 
 	public static void main(String[] args) {

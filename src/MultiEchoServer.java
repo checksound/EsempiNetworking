@@ -26,7 +26,10 @@ public class MultiEchoServer {
 			try {
 
 				Socket socket = serverSocket.accept();
-				executor.submit(new EchoServerClientHandler(socket));
+				Thread t = new Thread(new EchoServerClientHandler(socket));
+				t.start();
+				
+				// executor.submit(new EchoServerClientHandler(socket));
 			} catch (IOException e) {
 				break;
 				// entrerei qui se serverSocket venisse chiuso
