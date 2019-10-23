@@ -51,3 +51,4 @@ IP (4 byte) 8 byte non utilizzati)*/
         }
         close(sda);
     }
+}
