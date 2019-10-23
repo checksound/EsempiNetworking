@@ -32,11 +32,28 @@ in.close();
 
 ## SOCKET in C
 
+![](connessione_client_server.PNG)
+
+![](socket_in_c.PNG)
+
+| PRIMITIVA (usata da…) | AZIONE |
+|-----------|--------|
+|**SOCKET**  (clint/server) | Crea un punto di accesso relativo al servizio (endpoint) e restituisce un descrittore di socket che è simile ad un descrittore di file|
+|**BIND** (server) | assegna l’indirizzo al socket creato e la porta prefissata. In genere viene eseguito solo sul server. Infatti la porta sul client è assegnata automaticamente dal Sistema Operativo |
+|**LISTEN** (server) | Utilizzata per rendere il socket pronto ad accettare le richieste in arrivo. E’ un socket passivo, cioè non prende mai l’iniziativa. Specifica il numero delle connessioni che possono essere servite. E’ utilizzata solo dai server. |
+|**ACCEPT** (server) | bloccante: arresta il mittente finchè non si realizza la connessione. Permette ad un server di prendere la prima richiesta presente nella sua coda di ricezione. Se la coda è vuota resta bloccato in attesa di una connessione. Un nuovo descrittore di socket è assegnato automaticamente appena la connessione è accettata|
+|**CONNECT** (client)| Permette al client di aprire la connessione con il server. Il Sistema Operativo assegna automaticamente una porta. La funzione termina dopo la creazione della connessione. Blocca il client e attiva la procedura di connessione : al completamento il client viene sbloccato |
+|**SEND** - Write (client/server) | Spedisce dati sulla connessione aperta |
+|**RECEIVE** – Read (client/server) | Riceve dati sulla connessione aperta |
+|**CLOSE** (client/server)| chiusura della connessione |
+
 Codice in C, sulle socket: [echo_server.c](./src/echo_server.c) e [echo_client.c](./src/echo_client.c).
  
 ## SOCKET in JAVA
 
 ### SERVIZIO DATE
+
+## SERVIZIO DATE
 
 Il primo esempio: [DateClient](./src/DateClient.java) e [DateServer](./src/DateServer.java). Il client fa una connessione al server, legge una riga di testo inviata dal server, e mostra il testo a console. Il testo inviato dal server consiste nella data e time corrente sul computer dove il server è attivo.
 
