@@ -53,8 +53,6 @@ Codice in C, sulle socket: [echo_server.c](./src/echo_server.c) e [echo_client.c
 
 ### SERVIZIO DATE
 
-## SERVIZIO DATE
-
 Il primo esempio: [DateClient](./src/DateClient.java) e [DateServer](./src/DateServer.java). Il client fa una connessione al server, legge una riga di testo inviata dal server, e mostra il testo a console. Il testo inviato dal server consiste nella data e time corrente sul computer dove il server è attivo.
 
 ### UNA SEMPLICE NETWORK CHAT
