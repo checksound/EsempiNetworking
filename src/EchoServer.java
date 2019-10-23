@@ -17,32 +17,32 @@ public class EchoServer {
 		serverSocket = new ServerSocket(port);
 		System.out.println("Server	socket	ready on port:" + port);
 		// resto in attesa di una connessione
-		
+
 		while (true) {
-		Socket socket = serverSocket.accept();
-		System.out.println("Received client	connection");
-		// apro gli stream di input e output per leggere
-		// e scrivere nella connessione appena ricevuta
-		Scanner in = new Scanner(socket.getInputStream());
-		PrintWriter out = new PrintWriter(socket.getOutputStream());
-		// leggo e scrivo nella connessione finche'non
-		// ricevo "quit"
-		while (true) {
-			String line = in.nextLine();
-			if (line.equals("quit")) {
-				break;
-			} else {
-				out.println("Received:	" + line);
-				out.flush();
+			Socket socket = serverSocket.accept();
+			System.out.println("Received client	connection");
+			// apro gli stream di input e output per leggere
+			// e scrivere nella connessione appena ricevuta
+			Scanner in = new Scanner(socket.getInputStream());
+			PrintWriter out = new PrintWriter(socket.getOutputStream());
+			// leggo e scrivo nella connessione finche'non
+			// ricevo "quit"
+			while (true) {
+				String line = in.nextLine();
+				if (line.equals("quit")) {
+					break;
+				} else {
+					out.println("Received:	" + line);
+					out.flush();
+				}
 			}
+			// chiudo gli stream e il socket
+			System.out.println("Closing	sockets");
+			in.close();
+			out.close();
+			socket.close();
 		}
-		// chiudo gli stream e il socket
-		System.out.println("Closing	sockets");
-		in.close();
-		out.close();
-		socket.close();
-		} 
-		
+
 		// serverSocket.close();
 	}
 
