@@ -1,3 +1,5 @@
+package io.checksound.networking;
+
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.Scanner;

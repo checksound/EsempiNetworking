@@ -1,3 +1,5 @@
+package io.checksound.networking;
+
 import java.net.*;
 import java.util.Enumeration;
 

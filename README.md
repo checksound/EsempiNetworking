@@ -2,12 +2,12 @@
 
 ## NetworkInterface & InetAddress
 
-Programma per visualuzzare le informazioni su le interfacce di rete sul proprio PC, utilizzando le classi `java.net.NetworkInterface` e `java.net.InetAddress`: [ShowMyNetwork](./src/ShowMyNetwork.java).
+Programma per visualuzzare le informazioni su le interfacce di rete sul proprio PC, utilizzando le classi `java.net.NetworkInterface` e `java.net.InetAddress`: [io.checksound.networking.ShowMyNetwork](./src/io/checksound/networking/ShowMyNetwork.java).
 
 
 ## FETCH URL
 
-Esempio [FetchURL](./src/FetchURL.java) per connetteri a una risorsa (Es: http://www.wikipedia.it) e leggere il contenuto della pagina HTML.
+Esempio [io.checksound.networking.FetchURL](./src/io/checksound/networking/FetchURL.java) per connetteri a una risorsa (Es: http://www.wikipedia.it) e leggere il contenuto della pagina HTML.
 
 ```java
 
@@ -53,16 +53,11 @@ Codice in C, sulle socket: [echo_server.c](./src/echo_server.c) e [echo_client.c
 
 ### SERVIZIO DATE
 
-Il primo esempio: [DateClient](./src/DateClient.java) e [DateServer](./src/DateServer.java). Il client fa una connessione al server, legge una riga di testo inviata dal server, e mostra il testo a console. Il testo inviato dal server consiste nella data e time corrente sul computer dove il server è attivo.
-
-### UNA SEMPLICE NETWORK CHAT
-
-[CLChatClient](./src/CLChatClient.java) e [CLChatServer](./src/CLChatServer.java). Nell'esempio del `DateServer`, il server trasmette l'informazione e il client legge. E' anche possibile avere una comunicazione bidirezionale tra client e server. In questo esempio il client e server possono mandarsi messaggi a vicenda. Da riga di comando gli utenti scrivono i messaggi. In questo esempio, il server aspetta una connessione da un client e poi chiude la connessione d'ascolto, così nessun altro client può connettersi. Dopo che client e server sono connessi, entrambi lavorano nello stesso modo. L'utente sul client digita un messaggio che è inviato al server, che lo mostra a display. L'utente del server allora digita un messaggio che è inviato al client, e così via.
-
+Il primo esempio: [io.checksound.networking.DateClient](./src/io/checksound/networking/DateClient.java) e [DateServer](./src/io/checksound/networking/DateServer.java). Il client fa una connessione al server, legge una riga di testo inviata dal server, e mostra il testo a console. Il testo inviato dal server consiste nella data e time corrente sul computer dove il server è attivo.
 
 ### SERVIZIO ECHO
 
-Client [LineClient](./src/LineClient.java) legge input da riga di comando, invia la richiesta al server su output stream e riceve la risposta dal server su input stream:
+Client [io.checksound.networking.LineClient](./src/io/checksound/networking/LineClient.java) legge input da riga di comando, invia la richiesta al server su output stream e riceve la risposta dal server su input stream:
 
 ```java
 public void startClient() throws IOException {
@@ -90,7 +85,7 @@ public void startClient() throws IOException {
 	}
 ```
 
-Il server, [EchoServer](./src/EchoServer.java) in ascolto delle richieste del client dall'input a cui risponde sull'output stream:
+Il server, [io.checksound.networking.EchoServer](./src/io/checksound/networking/EchoServer.java) in ascolto delle richieste del client dall'input a cui risponde sull'output stream:
 
 ```java
 public void startServer() throws IOException {
@@ -124,7 +119,10 @@ public void startServer() throws IOException {
     }
 ```
 
-Versione del server che accetta più connessioni da più client (versione con multithead. per gestire più client contemporaneamente): [MultiEchoServer](./src/MultiEchoServer.java) e [EchoServerClientHandler](./src/EchoServerClientHandler.java).
+Versione del server che accetta più connessioni da più client 
+(versione con multithead. per gestire più client contemporaneamente): 
+[io.checksound.networking.MultiEchoServer](./src/io/checksound/networking/MultiEchoServer.java) e 
+[io.checksound.networking.EchoServerClientHandler](./src/io/checksound/networking/EchoServerClientHandler.java).
 
 
 	

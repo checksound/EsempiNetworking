@@ -1,3 +1,5 @@
+package io.checksound.networking;
+
 import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
@@ -12,8 +14,9 @@ public class MultiEchoServer {
 	}
 
 	public void startServer() {
-		ExecutorService executor = Executors.newCachedThreadPool();
+		// ExecutorService executor = Executors.newCachedThreadPool();
 		ServerSocket serverSocket;
+		
 		try {
 			serverSocket = new ServerSocket(port);
 		} catch (IOException e) {
@@ -21,11 +24,15 @@ public class MultiEchoServer {
 			// porta non disponibile
 			return;
 		}
+		
 		System.out.println("Server ready");
+		
 		while (true) {
 			try {
 
 				Socket socket = serverSocket.accept();
+				System.out.println("Received client	connection");
+				
 				Thread t = new Thread(new EchoServerClientHandler(socket));
 				t.start();
 				
@@ -35,7 +42,8 @@ public class MultiEchoServer {
 				// entrerei qui se serverSocket venisse chiuso
 			}
 		}
-		executor.shutdown();
+		
+		// executor.shutdown();
 	}
 
 	public static void main(String[] args) {
