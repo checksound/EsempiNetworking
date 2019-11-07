@@ -122,7 +122,7 @@ public void startServer() throws IOException {
 ## ECHO SERVER MULTITHREAD
 
 Versione del server che accetta più connessioni da più client 
-(versione con multithead, per gestire più client contemporaneamente): 
+(versione con multithead, per gestire le richieste di più client contemporaneamente): 
 [io.checksound.networking.MultiEchoServer](./src/io/checksound/networking/MultiEchoServer.java) e 
 [io.checksound.networking.EchoServerClientHandler](./src/io/checksound/networking/EchoServerClientHandler.java).
 
