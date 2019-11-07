@@ -53,7 +53,7 @@ Codice in C, sulle socket: [echo_server.c](./src/echo_server.c) e [echo_client.c
 
 ### SERVIZIO DATE
 
-Il primo esempio: [io.checksound.networking.DateClient](./src/io/checksound/networking/DateClient.java) e [DateServer](./src/io/checksound/networking/DateServer.java). Il client fa una connessione al server, legge una riga di testo inviata dal server, e mostra il testo a console. Il testo inviato dal server consiste nella data e time corrente sul computer dove il server è attivo.
+Il primo esempio: [io.checksound.networking.DateClient](./src/io/checksound/networking/DateClient.java) e [io.checksound.networking.DateServer](./src/io/checksound/networking/DateServer.java). Il client fa una connessione al server, legge una riga di testo inviata dal server, e mostra il testo a console. Il testo inviato dal server consiste nella data e time corrente sul computer dove il server è attivo.
 
 ### SERVIZIO ECHO
 
@@ -118,6 +118,8 @@ public void startServer() throws IOException {
 		serverSocket.close();
     }
 ```
+
+## ECHO SERVER MULTITHREAD
 
 Versione del server che accetta più connessioni da più client 
 (versione con multithead. per gestire più client contemporaneamente): 
