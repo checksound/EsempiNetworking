@@ -126,5 +126,38 @@ Versione del server che accetta più connessioni da più client
 [io.checksound.networking.MultiEchoServer](./src/io/checksound/networking/MultiEchoServer.java) e 
 [io.checksound.networking.EchoServerClientHandler](./src/io/checksound/networking/EchoServerClientHandler.java).
 
+## DATAGRAM
+
+Comunicazione tramite socket UDP.
+
+Tutorial: https://docs.oracle.com/javase/tutorial/networking/datagrams/index.html
+
+Server [io.checksound.networking.udp.QuoteServer](./src/io/checksound/networking/udp/QuoteServer.java) e
+[io.checksound.networking.udp.QuoteServerThread](./src/io/checksound/networking/udp/QuoteServerThread.java)
+
+Client [io.checksound.networking.udp.QuoteClient](./src/io/checksound/networking/udp/QClient.java)
+
+Il client invia la richiesta al server tramite un pacchetto di tipo `java.net.DatagramPacket` 
+su una `java.net.DatagramSocket`.
+
+Il server aspetta la richiesta su una `java.net.DatagramSocket`, 
+in ascolto su una certa porta e 
+una volta ricevuta la richiesta, invia una risposta come pacchetti 
+`java.net.DatagramPacket`.
+
+Il `DatagramPacket` quando ricevuto contiene l'indirizzo dell'host (specificato come `java.net.InetAddress`) e la porta del mittente.
+
+Quando si vuole inviare un `DatagramPacket` bisogna specificare host e la porta del destinatario.
+
+## MULTICAST
+
+https://www.developer.com/java/data/how-to-multicast-using-java-sockets.html
+
+Utilizzo di indirizzi di multicast
+
+Il server [io.checksound.networking.multicast.MulticastServer](./src/io/checksound/networking/multicast/MulticastServer.java) e
+[io.checksound.networking.multicast.MulticastServerThread](./src/io/checksound/networking/multicast/MulticastServerThread.java)
+
+Il client [io.checksound.networking.multicast.MulticastClient](./src/io/checksound/networking/multicast/MulticastClient.java)
 
 	
