@@ -128,14 +128,14 @@ Versione del server che accetta più connessioni da più client
 
 ## DATAGRAM
 
-Comunicazione tramite socket UDP.
+Comunicazione tramite socket UDP (User Datagram Protocol). 
 
 Tutorial: https://docs.oracle.com/javase/tutorial/networking/datagrams/index.html
 
 Server [io.checksound.networking.udp.QuoteServer](./src/io/checksound/networking/udp/QuoteServer.java) e
 [io.checksound.networking.udp.QuoteServerThread](./src/io/checksound/networking/udp/QuoteServerThread.java)
 
-Client [io.checksound.networking.udp.QuoteClient](./src/io/checksound/networking/udp/QClient.java)
+Client [io.checksound.networking.udp.QuoteClient](./src/io/checksound/networking/udp/QuoteClient.java)
 
 Il client invia la richiesta al server tramite un pacchetto di tipo `java.net.DatagramPacket` 
 su una `java.net.DatagramSocket`.
@@ -153,7 +153,7 @@ Quando si vuole inviare un `DatagramPacket` bisogna specificare host e la porta 
 
 https://www.developer.com/java/data/how-to-multicast-using-java-sockets.html
 
-Utilizzo di indirizzi di multicast
+Utilizzo di indirizzi di multicast. 
 
 Il server [io.checksound.networking.multicast.MulticastServer](./src/io/checksound/networking/multicast/MulticastServer.java) e
 [io.checksound.networking.multicast.MulticastServerThread](./src/io/checksound/networking/multicast/MulticastServerThread.java)
