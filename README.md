@@ -153,11 +153,12 @@ Quando si vuole inviare un `DatagramPacket` bisogna specificare host e la porta 
 
 https://www.developer.com/java/data/how-to-multicast-using-java-sockets.html
 
-Utilizzo di indirizzi di multicast. 
+Utilizzo di indirizzi di multicast. Java fornisce la classe `java.net.MulticastSocket` 
+sottoclasse di `java.net.DatagramSocket`: 
 
-Il server [io.checksound.networking.multicast.MulticastServer](./src/io/checksound/networking/multicast/MulticastServer.java) e
+L'applicazione server implementata dalle classi: [io.checksound.networking.multicast.MulticastServer](./src/io/checksound/networking/multicast/MulticastServer.java) e
 [io.checksound.networking.multicast.MulticastServerThread](./src/io/checksound/networking/multicast/MulticastServerThread.java)
 
-Il client [io.checksound.networking.multicast.MulticastClient](./src/io/checksound/networking/multicast/MulticastClient.java)
+L'applicazione client implementata dalla classe: [io.checksound.networking.multicast.MulticastClient](./src/io/checksound/networking/multicast/MulticastClient.java)
 
 	
