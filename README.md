@@ -156,9 +156,18 @@ https://www.developer.com/java/data/how-to-multicast-using-java-sockets.html
 Utilizzo di indirizzi di multicast. Java fornisce la classe `java.net.MulticastSocket` 
 sottoclasse di `java.net.DatagramSocket`: 
 
+### ESEMPIO SERVER / CLIENT MULTICAST
+
+Esempio di un'applicazione server che invia messaggi a client su indirizzo multicast: il server invia una serie di messaggi che arrivano a tutti i client che hanno eseguito il metodo `joinGroup(InetAddress mcastaddr)` di `java.net.MulticastSocket`.
+
 L'applicazione server implementata dalle classi: [io.checksound.networking.multicast.MulticastServer](./src/io/checksound/networking/multicast/MulticastServer.java) e
 [io.checksound.networking.multicast.MulticastServerThread](./src/io/checksound/networking/multicast/MulticastServerThread.java)
 
-L'applicazione client implementata dalla classe: [io.checksound.networking.multicast.MulticastClient](./src/io/checksound/networking/multicast/MulticastClient.java)
+L'applicazione client implementata dalla classe: [io.checksound.networking.multicast.MulticastClient](./src/io/checksound/networking/multicast/MulticastClient.java).
+
+### ESEMPIO CHAT 
+
+Applicazione che implementa una chat utilizzando indirizzi di multicast: ogni applicazione per ogni utente della chat, invia i messaggi dell'utente, su un indirizzo di multicast a tutte le altre applicazioni attive: [io.checksound.networking.multicast.GroupChat](./src/io/checksound/networking/multicast/GroupChat.java).
+
 
 	
