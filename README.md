@@ -119,6 +119,14 @@ public void startServer() throws IOException {
     }
 ```
 
+### UNA SEMPLICE APPLICAZIONE CHAT DI TIPO CLIENT/SERVER
+
+Il server per la chat: [io.checksound.networking.CLChatServer](./src/io/checksound/networking/CLChatServer.java). 
+
+Il client per la chat: [io.checksound.networking.CLChatClient](./src/io/checksound/networking/CLChatClient.java).
+  
+Questa è un'implementazione molto limitata: la comunicazione avviene solo tra un client e un server, quindi tra due soli utenti, non come una chat reale in cui più utenti cominicano contemporaneamente.
+
 ## ECHO SERVER MULTITHREAD
 
 Versione del server che accetta più connessioni da più client 
@@ -165,7 +173,7 @@ L'applicazione server implementata dalle classi: [io.checksound.networking.multi
 
 L'applicazione client implementata dalla classe: [io.checksound.networking.multicast.MulticastClient](./src/io/checksound/networking/multicast/MulticastClient.java).
 
-### ESEMPIO CHAT 
+### ESEMPIO CHAT su MULTICAST
 
 Applicazione che implementa una chat utilizzando indirizzi di multicast: ogni applicazione per ogni utente della chat, invia i messaggi dell'utente, su un indirizzo di multicast a tutte le altre applicazioni attive: [io.checksound.networking.multicast.GroupChat](./src/io/checksound/networking/multicast/GroupChat.java).
 
