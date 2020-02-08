@@ -33,7 +33,6 @@ package io.checksound.networking.udp;
 
 import java.io.*;
 import java.net.*;
-import java.util.*;
 
 public class QuoteClient {
 	public static void main(String[] args) throws IOException {
