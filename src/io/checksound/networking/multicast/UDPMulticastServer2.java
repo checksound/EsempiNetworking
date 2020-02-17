@@ -8,14 +8,14 @@ import java.net.InetAddress;
 /**
  * Client give acknoledge they have received message.
  * 
- * @author PC610
+ * @author Massimo
  *
  */
 public class UDPMulticastServer2 {
 	
 	/**
 	 * Thread di lettura degli ACKNOLEDGE inviati dai client
-	 * @author PC610
+	 * @author Massimo
 	 *
 	 */
 	private static class ReaderThread extends Thread {

@@ -134,6 +134,18 @@ Versione del server che accetta più connessioni da più client
 [io.checksound.networking.MultiEchoServer](./src/io/checksound/networking/MultiEchoServer.java) e 
 [io.checksound.networking.EchoServerClientHandler](./src/io/checksound/networking/EchoServerClientHandler.java).
 
+## DATE SERVER MULTITHREAD
+
+Evoluzione del io.checksound.networking.DateServer, 
+reso multithread: [io.checksound.networking.DateServerWithThreads](./src/io/checksound/networking/DateServerWithThreads.java)
+
+Ulteriore versione multithread che utilizza un connection pool di thread e 
+una blocking queue di tipo `java.util.concurrent.ArrayBlockingQueue`:
+
+[io.checksound.networking.DateServerWithThreadPool](./src/io/checksound/networking/DateServerWithThreadPool.java)
+
+![](./Produttore_consumatore_connection_pool.PNG)
+
 ## DATAGRAM
 
 Comunicazione tramite socket UDP (User Datagram Protocol). 

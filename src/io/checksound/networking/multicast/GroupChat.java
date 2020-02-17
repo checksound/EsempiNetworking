@@ -45,6 +45,7 @@ public class GroupChat {
 						socket.close();
 						break;
 					}
+					
 					message = name + ": " + message;
 					byte[] buffer = message.getBytes();
 					DatagramPacket datagram = new DatagramPacket(buffer, buffer.length, group, port);
